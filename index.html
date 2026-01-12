@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet"
+  />
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- <link href="dist/css/final.css" rel="stylesheet" /> -->
+  <link href="dist/output.css" rel="stylesheet" />
+  <title>Portfolio</title>
+  <script>
+    if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+</head>
+
+<body>
+<!-- Header Start -->
+<header class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
+  <div class="container mx-auto">
+    <div class="relative flex items-center justify-between py-4 px-4">
+
+      <div class="animate__animated animate__bounceInLeft">
+        <a href="#" class="text-xl font-bold text-dark">PORTFOLIO</a>
+      </div>
+
+      <button id="hamburger" name="hamburger" type="button" class="block lg:hidden">
+        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out w-[30px] h-[2px] my-2 block bg-white"></span>
+        <span class="hamburger-line transition duration-300 ease-in-out w-[30px] h-[2px] my-2 block bg-white"></span>
+        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out w-[30px] h-[2px] my-2 block bg-white"></span>
+      </button>
+
+      <nav id="nav-menu" class="hidden absolute right-5 top-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
+        <ul class="lg:flex lg:flex-row lg:items-center">
+          <li class="group">
+            <a href="#" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white lg:mx-4">Home</a>
+          </li>
+          <li class="group">
+            <a href="#experience" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white lg:mx-4">Experience</a>
+          </li>
+          <li class="group">
+            <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white lg:mx-4">Portfolio</a>
+          </li>
+          <li class="group">
+            <a href="#skill" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white lg:mx-4">Skills</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<section
+        id="hero"
+        class="target-element flex h-screen items-center pt-36 pb-32 dark:bg-dark"
+>
+  <div class="container flex items-start justify-between gap-3">
+    <div class="animate__animated animate__swing hidden w-full px-4 lg:block lg:w-1/4"
+    >
+      <img
+              src="dist/image/photo.png"
+              alt="profile"
+      />
+    </div>
+    <!-- About -->
+    <div class="w-full self-center pl-4 lg:w-3/4">
+
+      <h1
+              class="animate__animated animate__bounceInLeft mb-5 text-base text-primary md:text-2xl"
+      >
+                <span
+                        class="mt-2 block text-4xl font-bold text-dark lg:text-6xl"
+                >Hi, I'm Sada</span
+                >
+      </h1>
+      <h1
+              class="animate__animated animate__zoomInLeft mb-3 text-2xl font-medium text-primary lg:text-4xl"
+      >
+        <span>Frontend Developer</span>
+      </h1>
+      <p
+              class="animate__animated animate__lightSpeedInLeft mb-5 text-lg text-slate-500 dark:text-slate-200"
+      >
+        I’m a Frontend Developer with 6+ years of experience building fast and modern web apps.
+        <br />I mainly work with <b class="text-primary">React</b> and <b class="text-primary">Next.js</b>, turning designs into clean, responsive, and easy-to-use interfaces.
+
+        I enjoy crafting smooth user experiences, writing clean code, and making products that feel good to use. For me, it’s not just about making things work — it’s about making them feel right for users and valuable for businesses.
+      </p>
+      <div
+              class="animate__animated animate__rubberBand mb-5 flex items-center gap-3"
+      >
+        <a
+                href="https://www.linkedin.com/in/sada-sada-40446219a/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                class="h-7 w-7"
+        >
+          <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>LinkedIn</title>
+            <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+        <a
+                href="https://www.instagram.com/sadaa29/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                class="h-7 w-7"
+        >
+          <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Instagram</title>
+            <path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+            />
+          </svg>
+        </a>
+
+        <a
+                href="https://github.com/sada32"
+                target="_blank"
+                rel="noreferrer nofollow"
+                class="h-7 w-7"
+        >
+          <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>GitHub</title>
+            <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </a>
+      </div>
+      <a class="animate__animated animate__lightSpeedInLeft inline-block text-white mt-10 rounded-md py-2 px-4 cursor-pointer bg-primary box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" href="/CV.pdf" download>
+        Download CV
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Experience Section Start -->
+<section id="experience" class="bg-dark py-32">
+  <div class="mb-20 w-full px-4">
+    <div class="mx-w-xl mx-auto text-center">
+      <h2 class="mb-4 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl">
+        Job Experience
+      </h2>
+    </div>
+  </div>
+  <div class="container flex flex-col">
+    <div class="ml-2 text-white lg:ml-20 mb-10">
+      <div class="flex justify-between">
+        <span>
+            <b class="text-primary">Fulltime Frontend Developer</b> at
+            <a
+                    href="https://www.surge.co.id/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-blue-500"
+            >Solusi Sinergi Digital, Tbk (SURGE)</a>
+        </span>
+        <span>( Sep 2022 - Present )</span>
+      </div>
+      <div class="mt-6 rounded-lg bg-slate-100 p-5 dark:bg-slate-800">
+        <span class="text-primary font-bold">About Company</span>
+        <p class="text-justify mb-4 text-base text-secondary dark:text-slate-300">
+          Solusi Sinergi Digital, Tbk (SURGE) is an Indonesian digital technology and telecommunications infrastructure company that provides affordable fiber optic internet and develops public Wi-Fi and digital ecosystem solutions to accelerate national digital inclusion.
+        </p>
+        <span class="text-primary mt-6 font-bold">Key Contributions</span>
+        <p class="text-justify text-base text-secondary dark:text-slate-300">
+          Built and developed in-house products including Lini Store, Lini Mitra, Kelola SaaS v2, Sobat Tani, and Kelola Tracking App using ReactJS. Improved and maintained Kelola WMS and Kelola SaaS v1 using AngularJS, focusing on bug fixing, refactoring, and system enhancements. Collaborated closely with UI/UX designers to translate designs into functional, responsive web applications.
+        </p>
+      </div>
+    </div>
+
+    <div class="ml-2 text-white lg:ml-20 mb-10">
+      <div class="flex justify-between">
+        <span>
+            <b class="text-primary">Fulltime Frontend Developer</b> at PT Kipa Indonesia
+        </span>
+        <span>( Jul 2020 - Aug 2022 )</span>
+      </div>
+      <div class="mt-6 rounded-lg bg-slate-100 p-5 dark:bg-slate-800">
+        <span class="text-primary font-bold">About Company</span>
+        <p class="text-justify mb-4 text-base text-secondary dark:text-slate-300">
+          PT Kipa Indonesia is a technology startup providing integrated Point of Sales (POS) and inventory management solutions designed to help MSMEs manage their business operations more efficiently through digital tools.
+        </p>
+        <span class="text-primary mt-6 font-bold">Key Contributions</span>
+        <p class="text-justify text-base text-secondary dark:text-slate-300">
+          Developed core platforms including Kipa POS, Kipa Superadmin, and Kipa Catalog using ReactJS. Successfully improved application performance and speed from previous versions to enhance user convenience. Responsible for conducting thorough code reviews and performing bug fixes to ensure system reliability.
+        </p>
+      </div>
+    </div>
+
+    <div class="ml-2 text-white lg:ml-20 mb-10">
+      <div class="flex justify-between">
+        <span>
+            <b class="text-primary">Freelance Frontend Developer</b> at Indonesian National Police
+        </span>
+        <span>( Jan 2022 - Mar 2022 )</span>
+      </div>
+      <div class="mt-6 rounded-lg bg-slate-100 p-5 dark:bg-slate-800">
+        <span class="text-primary font-bold">About Company</span>
+        <p class="text-justify mb-4 text-base text-secondary dark:text-slate-300">
+          The Indonesian National Police (POLRI) is the national law enforcement agency that utilizes digital assessment systems to manage recruitment and psychological evaluations for its members nationwide.
+        </p>
+        <span class="text-primary mt-6 font-bold">Key Contributions</span>
+        <p class="text-justify text-base text-secondary dark:text-slate-300">
+          Architected and designed a digital psychology test and administrative dashboard using NextJS. Developed new features based on dynamic client briefs and optimized the system to handle high-volume data traffic during testing periods while maintaining high performance.
+        </p>
+      </div>
+    </div>
+
+    <div class="ml-2 text-white lg:ml-20 mb-10">
+      <div class="flex justify-between">
+        <span>
+            <b class="text-primary">Fulltime Frontend Developer</b> at
+            <a
+                    href="https://www.visionet.co.id/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-blue-500"
+            >PT Visionet Data International</a>
+        </span>
+        <span>( Jun 2019 - Jun 2020 )</span>
+      </div>
+      <div class="mt-6 rounded-lg bg-slate-100 p-5 dark:bg-slate-800">
+        <span class="text-primary font-bold">About Company</span>
+        <p class="text-justify mb-4 text-base text-secondary dark:text-slate-300">
+          PT Visionet Data International is a premier IT managed services company in Indonesia, providing a wide range of technology solutions including digital transformation, infrastructure services, and application development for various industries.
+        </p>
+        <span class="text-primary mt-6 font-bold">Key Contributions</span>
+        <p class="text-justify text-base text-secondary dark:text-slate-300">
+          Developed new features for property management systems including Engine 3 Property, Infinity 8 Property, and Green Cocoland using AngularJS. Actively implemented SCRUM methodologies in the development lifecycle and provided technical guidance and training for new developers joining the team.
+        </p>
+      </div>
+    </div>
+
+    <div class="ml-2 text-white lg:ml-20">
+      <div class="flex justify-between">
+        <span>
+            <b class="text-primary">Internship Web Developer & QA</b> at PT Aku Peduli Indonesia</span>
+        <span>( Jul 2018 - Sep 2018 )</span>
+      </div>
+      <div class="mt-6 rounded-lg bg-slate-100 p-5 dark:bg-slate-800">
+        <span class="text-primary font-bold">About Company</span>
+        <p class="text-justify mb-4 text-base text-secondary dark:text-slate-300">
+          PT Aku Peduli Indonesia is a digital solution provider focusing on community-based applications and web-based platforms to support social and business ecosystems.
+        </p>
+        <span class="text-primary mt-6 font-bold">Key Contributions</span>
+        <p class="text-justify text-base text-secondary dark:text-slate-300">
+          Designed and built the REMA web profile using ReactJS. Collaborated closely with the QA Lead to conduct comprehensive application testing, ensuring system quality and learning to effectively manage technical requirements through direct client interaction.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Experience Section end -->
+
+<!-- Portfolio Section Start -->
+<section
+        id="portfolio"
+        class="target-element bg-slate-100 pt-36 pb-32 dark:bg-slate-800"
+>
+  <div class="container">
+    <div class="w-full px-4">
+      <div class="mx-w-xl mx-auto mb-16 text-center">
+        <h2
+                class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
+        >
+          Portfolio
+        </h2>
+      </div>
+    </div>
+
+    <div class="mx-auto flex w-full flex-col items-start justify-center gap-5 md:flex-row lg:container"
+    >
+      <div class="lg:w-1/2">
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/kelola-saas-v2.png"
+                  alt="kalola-saas-v2"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Kelola SaaS v2
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Kelola is a digital solution for your business that provides ease
+            for users in all stages of business management from stores, products, orders, to fulfillment that supports
+            omni-channel features and collaborates with various online marketplaces and the best couriers.
+          </p>
+          <div class="mt-3">
+            <span>Link:  </span>
+            <a
+                    href="https://app-staging.saas.kelola.id"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://app-staging.saas.kelola.id/</a
+            >
+          </div>
+          <p class="mt-3 font-medium">
+            Tools: React, UNO CSS, TypeScript, Vite, React Suite.
+          </p>
+        </div>
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/linistore.png"
+                  alt="lini-store"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Lini Store
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Lini Store is a Social Commerce platform where you can not only shop, but also interact with
+            sellers. You can make group purchases to get cheaper prices, watch live sales
+            through LiniStore Live, and many other exciting things you can do on LiniStore.
+          </p>
+          <div class="mt-3">
+            <span>Link:  </span>
+            <a
+                    href="https://linistore.id"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://linistore.id/</a
+            >
+          </div>
+          <p class="mt-3 font-medium">
+            Tools: React, Tailwind CSS, TypeScript, Vite, Ant Design, Jotai
+          </p>
+        </div>
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/linimitra.png"
+                  alt="lini-mitra"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Lini Mitra
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Lini Mitra is a freelance canvasser application designed to simplify and optimize the canvassing workflow for freelance workers. The app helps canvassers manage leads, track daily activities,
+            and submit reports efficiently through a clean and user-friendly interface. Built with a mobile-first approach, the app delivers a seamless experience on smartphones, allowing canvassers to work efficiently while on the field.
+          </p>
+          <div class="mt-3">
+            <span>Link:  </span>
+            <a
+                    href="https://mitra.linistore.id"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://mitra.linistore.id/</a
+            >
+          </div>
+
+          <p class="mt-3 font-medium">
+            Tools: React Router, Chakra UI, TypeScript, Vite, PWA, Capacitor
+          </p>
+        </div>
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Kelola Tracking App
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Kelola Tracking App is a lightweight application for tracking goods delivery. Users can record the number of items received and upload delivery documents (surat jalan).
+            This app connects directly to Google Sheets via Google Apps Script.
+          </p>
+          <div class="mt-3">
+            <span>Link: </span>
+            <a
+                    href="https://track.kelola.id/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://track.kelola.id</a
+            >
+          </div>
+          <p class="mt-3 font-medium">
+            Tools: React, Tailwind CSS, Chakra UI, Vite, App Script
+          </p>
+        </div>
+
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Web Property & Sales System LIPPO HOMES
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            This web application is designed to display and manage all data related to unit purchases. It allows users to view detailed purchase information and generate important documents required during the transaction process.
+
+            The platform also helps sales teams facilitate unit and cluster purchases by providing clear data visibility and streamlined document generation, making the sales process more efficient and well-organized.
+          </p>
+          <p class="mt-3 font-medium">Tools: Angular JS</p>
+        </div>
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Sewasam Marketplace
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Sewasam Marketplace is an online marketplace platform designed for renting goods. The platform connects owners and renters, enabling users to list items for rent, discover available products, and manage rental transactions in a simple and efficient way.
+          </p>
+          <p class="mt-3 font-medium">
+            Tools: Next JS, shadcn, Tailwind CSS
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2">
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/wms.png"
+                  alt="wms"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Kelola WMS
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Kelola Warehouse is an application that provides
+            order fulfillment and product management services and is
+            integrated with marketplaces. There are several features in this
+            application.
+          </p>
+          <div class="mt-3">
+            <span>Link:</span>
+            <a
+                    href="https://app.kelola.id"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://app.kelola.id</a
+            >
+          </div>
+          <p class="mt-3 font-medium">
+            Tools: Angular, TypeScript, Vite, Material Design, Tailwind CSS
+          </p>
+        </div>
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/e-mental.png"
+                  alt="e-mental"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            E-Mental
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            E-Mental is a psychological assessment application designed to support
+            the mental testing process for police officer candidates. The app digitizes
+            psychological tests, making the evaluation process more efficient, structured,
+            and easy to manage.
+          </p>
+          <p class="mt-3 font-medium">
+            Tools: React, TypeScript, Redux, Bootstrap
+          </p>
+        </div>
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/agan-kipa.png"
+                  alt="lini-store"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Agan Kipa
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Agan Kipa is a reporting dashboard application built to support UMKM (small and medium businesses) using a Point of Sale system.
+            The app provides comprehensive sales reports, transaction summaries, and business performance insights in a
+            clear and easy-to-understand dashboard.
+          </p>
+          <div class="mt-3">
+            <span>Link:</span>
+            <a
+                    href="https://pos.kipa.id/login"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="text-primary"
+            >https://pos.kipa.id</a
+            >
+          </div>
+
+          <p class="mt-3 font-medium">
+            Tools: React, Javascript, Reactstrap, Redux
+          </p>
+        </div>
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <img
+                  src="dist/project/vibe-landing.png"
+                  alt="vibe-landing"
+                  class="mb-5 w-full rounded-lg"
+          />
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Vibe Landing
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            Vibe Landing is a personal dashboard where pre-built components within the dashboard can be dragged and rearranged.
+          </p>
+          <p class="mt-3 font-medium">
+            Tools: React, Typescript, Tailwind CSS, Vite
+          </p>
+        </div>
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Sobat Tani App
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            An application that helps farmers to meet their garden needs. Farmers can also consult
+            with argonomists to get the best harvest results.
+          </p>
+          <p class="mt-3 font-medium">
+            Tools: React Router, Chakra UI, TypeScript, Vite, PWA, Capacitor
+          </p>
+        </div>
+
+        <div class="mb-4 rounded-lg bg-white p-5 shadow">
+          <h3 class="mb-3 text-2xl font-semibold text-dark">
+            Posyhub
+          </h3>
+          <p class="text-justify text-base text-secondary">
+            PosyHub is an application developed as part of my undergraduate thesis, designed to support Posyandu management. The app helps manage participant data, health records, and routine activities, making administrative processes more organized and efficient for community health services.
+          </p>
+          <p class="mt-3 font-medium">Tools: Next, Typescript, Ant Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio Section End -->
+
+<!-- Programming Skills Section Start -->
+<section
+        id="skill"
+        class="target-element bg-secondary py-32"
+>
+  <div class="container">
+    <div class="w-full px-4">
+      <div class="mx-w-xl mx-auto mb-10 text-center">
+        <div class="mx-w-xl mx-auto mb-16 text-center">
+          <h2
+                  class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
+          >
+            Skills
+          </h2>
+        </div>
+      </div>
+      <div class="flex flex-wrap w-full justify-around items-center ">
+        <div>
+          <img
+                  src="dist/image/skills/css3.svg"
+                  class="w-[120px] w-opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+          />
+        </div>
+        <div>
+          <img
+                  src="dist/image/skills/html5.svg"
+                  class="w-[120px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+          />
+        </div>
+        <div>
+          <img
+                  src="dist/image/skills/js.svg"
+                  class="w-[90px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+          />
+        </div>
+        <div>
+          <img
+                  src="dist/image/skills/next-js.svg"
+                  class="w-[120px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+          />
+        </div>
+
+        <img
+                src="dist/image/skills/react.svg"
+                class="w-[120px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+        />
+        <img
+                src="dist/image/skills/tailwindcss.svg"
+                class="w-[120px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+        />
+        <img
+                src="dist/image/skills/typescript.svg"
+                class="w-[80px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+        />
+        <img
+                src="dist/image/skills/bootstrap.svg"
+                class="w-[120px] opacity-60 grayscale transition hover:scale-110 hover:opacity-100 hover:grayscale-0"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer" class="target-element bg-dark pt-32 pb-16">
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="mb-12 w-full px-4 text-slate-300 md:w-1/3">
+        <h3 class="mb-3 text-xl text-white font-bold">Contact Me</h3>
+        <p class="mb-2 text-sm lg:text-base">sada62510@gmail.com</p>
+        <a
+                href="https://api.whatsapp.com/send?phone=6283119945183"
+                class="mb-3 text-sm text-white lg:text-base"
+        >083119945183</a
+        >
+        <p class="mb-2 mt-1 text-sm lg:text-base">Malang, East Java</p>
+      </div>
+
+      <div class="mb-12 w-full px-4 text-slate-300 md:w-1/3">
+        <h1 class="mb-3 text-xl font-bold text-white">Quick Link</h1>
+        <a
+                href="#"
+                class="mb-2 block text-sm hover:text-primary lg:text-base"
+        >Home</a
+        >
+        <a
+                href="#experience"
+                class="mb-2 block text-sm hover:text-primary lg:text-base"
+        >Experience</a
+        >
+        <a
+                href="#portfolio"
+                class="mb-2 block text-sm hover:text-primary lg:text-base"
+        >Portfolio</a
+        >
+        <a
+                href="#skill"
+                class="mb-2 block text-sm hover:text-primary lg:text-base"
+        >Skills</a
+        >
+      </div>
+      <div class="mb-12 w-full px-4 text-slate-300 md:w-1/3">
+        <h1 class="mb-3 text-xl font-bold text-white">Download CV</h1>
+        <img class="w-[120px]" src="dist/image/cv.png" alt="cv" />
+      </div>
+    </div>
+    <div class="border-t border-slate-700 pt-10">
+      <p class="mt-5 text-center text-xs text-slate-300 md:text-sm">
+        Made with love by
+        <a
+                href="https://github.com/sada32"
+                target="_blank"
+                class="text-primary hover:opacity-80"
+        >Sada</a
+        >
+        using Tailwind CSS
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Footer Section End -->
+
+<!-- Button To Top Start -->
+<a
+        id="button-to-top"
+        href="#"
+        class="fixed bottom-4 right-4 hidden h-14 w-14 items-center justify-center rounded-full bg-primary"
+>
+      <span
+              class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2 border-white"
+      ></span>
+</a>
+<!-- Button To Top End -->
+<script src="dist/js/script.js"></script>
+</body>
+</html>
